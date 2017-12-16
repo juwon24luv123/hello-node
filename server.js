@@ -65,6 +65,6 @@ app.get('/information', (req, res) => {
 //     });
 // });
 
-app.listen(5000,() => {
-    console.log("listening on port 5000");
+app.listen(port, () => {
+    console.log("listening on port 3000");
 });
