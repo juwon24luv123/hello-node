@@ -2,6 +2,8 @@ const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
 
+const port = process.env.PORT || 3000;
+
 var app = express();
 
 // path of link folder
@@ -47,15 +49,15 @@ app.get('/', (req, res) => {
 });
 
     // bad - send back json with errorMesage
-// app.get('/bad', (req, res) => {
-//     res.send({
-//         errorMessage: 'Unable to handle request'
-//     });
-// });
+app.get('/bad', (req, res) => {
+    res.send({
+        errorMessage: 'Unable to handle request'
+    });
+});
 
-// app.get('/information', (req, res) => {
-//     res.send('Information about the page');
-// });
+app.get('/information', (req, res) => {
+    res.send('Information about the page');
+});
 
 // app.get('/contact', (req, res) => {
 //     res.send({
